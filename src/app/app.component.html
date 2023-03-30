@@ -1,0 +1,29 @@
+<app-toolbar></app-toolbar>
+<app-aside></app-aside>
+<section>
+
+
+  <div class="accordion" id="accordionLista" *ngFor="let datoAlumno for alumnos">
+    <div class="accordion-item" {{datoAlumno.nombre}}{{datoAlumno.apellido}}>
+
+
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Alumno {{datoAlumno.nicname}}
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>{{datoAlumno.nombre}}{{datoAlumno.apellido}}</strong> {{datoAlumno.edad}}
+          <code>{{datoAlumno.carrera}}</code>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav></nav>
+
+
+</section>
+<app-footer></app-footer>
